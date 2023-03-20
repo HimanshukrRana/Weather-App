@@ -2,8 +2,7 @@ import hotBg from "./assets/hot.jpg";
 import coldBg from "./assets/cold.jpg";
 import Descriptions from "./components/Descriptions";
 import { useEffect, useState } from "react";
-import { getFormattedWeatherData } from "./WeatherService";
-
+import { getFormattedWeatherData } from "./weatherService";
 
 function App() {
   const [city, setCity] = useState("Paris");
@@ -43,7 +42,6 @@ function App() {
 
   return (
     <div className="app" style={{ backgroundImage: `url(${bg})` }}>
-      
       <div className="overlay">
         {weather && (
           <div className="container">
